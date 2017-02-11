@@ -1,9 +1,6 @@
 % !TEX program = pdflatex
 % !BIB program = biber
 
-%% One can optionally have all this inside a separate setup.tex
-% \include{setup}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % !TEX root = main.tex
 \documentclass[10pt, a4paper]{article}
 % \documentclass[12pt, a4paper, oneside]{memoir}
@@ -77,7 +74,6 @@
   numbers=left,xleftmargin=4mm,framexleftmargin=0mm,xrightmargin=0mm,
   frame=top,frame=bottom,
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{CS414 Practical 2}
 \author{Leandra Geldenhuys\\17534666\\\\Daniel Robinson\\18361137}
@@ -334,6 +330,8 @@ The LoRa RFM96W\cite{lora} is perfect. It works at 433 MHz, and has a range of a
 
 \newpage
 
+\section{Ground Control System Design}
+
 % edit figure: https://www.draw.io/#G0B5A1O6JXuObxUEdaaDgtcXhqMXc
 \begin{figure}
 % \includegraphics[scale=0.65]{GCS.svg}
@@ -342,8 +340,6 @@ The LoRa RFM96W\cite{lora} is perfect. It works at 433 MHz, and has a range of a
 \caption{Ground Control Station diagram}
 \label{fig:gcs}
 \end{figure}
-
-\section{Ground Control System Design}
 
 \subsection{Ground Station}
 Figure \ref{fig:gcs} shows a diagram of the GCS.
@@ -357,10 +353,6 @@ As shown in Figure \ref{fig:gcs}, the GCS will consist of:
     \item Optionally a spare battery in case of bad weather conditions
 \end{itemize}
 \subsection{Requirements}
-
-The GCS must be able to do real-time processing on the telemetry data. This includes real-time plotting. Matlab does have animated plotting functionality (see Figure \ref{fig:matanim}). However, amCharts (see Figure \ref{fig:amcharts}) has arguably one of the best real-time plotting engines.\\
-
-The GCS must also be able to do post-processing on the sensory data (including attitude data). For example, flight trajectory (see Figure \ref{fig:flight_path}), oscillations, orientations etc.
 
 \begin{figure}
 \centering
@@ -376,9 +368,13 @@ The GCS must also be able to do post-processing on the sensory data (including a
 \label{fig:amcharts}
 \end{figure}
 
+The GCS must be able to do real-time processing on the telemetry data. This includes real-time plotting. Matlab does have animated plotting functionality (see Figure \ref{fig:matanim}). However, amCharts (see Figure \ref{fig:amcharts}) has arguably one of the best real-time plotting engines.\\
+
+The GCS must also be able to do post-processing on the attitude data. For example, flight trajectory
+
 \begin{figure}
 \centering
-\includegraphics[scale=0.35]{flight_path.png}
+\includegraphics[scale=0.6]{flight_path.png}
 \caption{CanSat flight trajectory\\
 Reproduced from \cite{gopher}}
 \label{fig:flight_path}
