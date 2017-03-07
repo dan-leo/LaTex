@@ -478,7 +478,7 @@ Table \ref{tab:resourcecosts} provides the estimated cost of the different resou
 \label{tab:resourcecosts}
 \begin{tabular}{ll}
 \textbf{Resources}          & \textbf{Rate} \\\hline
-Engineer 1                  & \$58.00       \\
+Engineer 1                  & \$52.00       \\
 Engineer 2                  & \$42.00       \\
 Junior Marketing Specialist & \$57.00       \\
 Junior Product designer     & \$47.00       \\
@@ -573,8 +573,46 @@ All risks pertaining to the simulator and product were identified and evaluated 
 A comprehensive summary of the project risk may be found in Appendix \ref{appendix:projectrisks}. The risk rank, management strategy, and frequency are shown for each risk identified. The risk management strategy are classified as risk acceptance, risk control, risk avoidance, and contingency plan. This includes a more detailed summary of the risk response for each risk.\\
 
 \noindent
-The risks were identified through project analogy wherein the risks were classified according risk source. Risk assessment was carried out using a double variable five point scale method. The two factors considered were the probability of the risk occurring, and the impact of the realisation of the risk on the project. The evaluation scale ranged from very high (5) to very low(1). These factors are combined by multiplication to yield an overall rank for each risk. Table \ref{appendix:riskmatrix} shows the risk evaluation matrix used with colour codes used to indicate the severity of the risk. 
+The risk matrix is as follows, in Table \ref{tab:riskmatrix}.
 
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\caption{Risk Matrix}
+\label{tab:riskmatrix}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllllllllllll}
+\multicolumn{1}{c}{} & \multicolumn{6}{c}{Impact} &  &  &  &  &  &  &  &  \\
+ &  & \textbf{VL} & \textbf{L} & \textbf{M} & \textbf{H} & \textbf{VH} &  &  &  &  &  &  &  &  \\
+ & \textbf{VH} & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8A102}H & \cellcolor[HTML]{F8A102}H & \cellcolor[HTML]{FE0000}VH &  &  &  &  &  &  &  &  \\
+ & \textbf{H} & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8A102}H & \cellcolor[HTML]{F8A102}H &  &  &  &  &  &  &  &  \\
+\multirow{-2}{*}{Probability} & \textbf{M} & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8A102}H &  &  &  &  &  &  &  &  \\
+ & \textbf{L} & \cellcolor[HTML]{34CDF9}VL & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M &  &  &  &  &  &  &  &  \\
+ & \textbf{VL} & \cellcolor[HTML]{34CDF9}VL & \cellcolor[HTML]{34CDF9}VL & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M &  &  &  &  &  &  &  & 
+\end{tabular}%
+}
+\end{table}
+
+\newpage
+\noindent
+The critical risks were identified in the following table.
+
+\begin{figure}[H]
+\label{fig:criticalrisks}
+\centering
+\includegraphics[scale=0.2]{images/critical_risks.png}
+\caption{Critical Risks table}
+\end{figure}
+
+
+%\begin{landscape}
+%
+%
+%\end{landscape}
 
 \newpage
 %\section*{Appendices}
@@ -828,33 +866,8 @@ Material Cost Increases for Prototype & 3 & 1 & \cellcolor[HTML]{34FF34}3 & Risk
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Risk Classification}
-\label{appendix:riskmatrix}
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-% \usepackage{graphicx}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[H]
-\centering
-\caption{Risk Matrix}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{lllllllllllllll}
-\multicolumn{1}{c}{} & \multicolumn{6}{c}{Impact} &  &  &  &  &  &  &  &  \\
- &  & \textbf{VL} & \textbf{L} & \textbf{M} & \textbf{H} & \textbf{VH} &  &  &  &  &  &  &  &  \\
- & \textbf{VH} & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8A102}H & \cellcolor[HTML]{F8A102}H & \cellcolor[HTML]{FE0000}VH &  &  &  &  &  &  &  &  \\
- & \textbf{H} & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8A102}H & \cellcolor[HTML]{F8A102}H &  &  &  &  &  &  &  &  \\
-\multirow{-2}{*}{Probability} & \textbf{M} & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8A102}H &  &  &  &  &  &  &  &  \\
- & \textbf{L} & \cellcolor[HTML]{34CDF9}VL & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M & \cellcolor[HTML]{F8FF00}M &  &  &  &  &  &  &  &  \\
- & \textbf{VL} & \cellcolor[HTML]{34CDF9}VL & \cellcolor[HTML]{34CDF9}VL & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{34FF34}L & \cellcolor[HTML]{F8FF00}M &  &  &  &  &  &  &  & 
-\end{tabular}%
-}
-\end{table}
-
-
-
+%\subsection{Risk Classification}
+%\label{appendix:riskmatrix}
 
 
 
